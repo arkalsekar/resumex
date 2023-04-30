@@ -7,10 +7,140 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'style.css' %}" />
-    <title>Document</title>
+    <title>RESUMEX</title>
   </head>
   <body>
-    <p>heyy there {{name}} !!!</p>
+    <navbar>
+      <nav class="navbar navbar-expand-lg px-2">
+        <div class="nav-bg py-3 container-fluid rounded-4 shadow-sm">
+          <a class="navbar-brand" href="#">RESUMEX</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <button class="mx-4 btn btn-outline-success">Register</button>
+            <button class="btn btn-outline-success">Login</button>
+          </div>
+        </div>
+      </nav>
+    </navbar>
+
+    <div class="main_container container-fluid">
+      <div class="row">
+        <div class="info_box col-md">
+          <h2 class="my-4 fw-bold">Instruction</h2>
+          <div class="container">
+            <div class="row w-100 bg-light p-2 rounded-2 my-2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+              eaque sed sit, debitis nesciunt repudiandae.
+            </div>
+            <div class="row w-100 bg-light p-2 rounded-2 my-2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+              eaque sed sit, debitis nesciunt repudiandae.
+            </div>
+            <div class="row w-100 bg-light p-2 rounded-2 my-2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+              eaque sed sit, debitis nesciunt repudiandae.
+            </div>
+          </div>
+        </div>
+        <div class="input_box col-md-6">
+          <h2 class="my-4 fw-bold text-light">Get Started</h2>
+
+          <form action="data" , method="POST">
+
+            {% csrf_token %}
+            <!-- Email INPUT -->
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Email address</label
+              >
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+              />
+            </div>
+            <!-- JD INPUT -->
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Enter Job Description</label
+              >
+              <textarea
+                class="form-control"
+                name="jd"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+            <!-- resume INPUT -->
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Enter Your resume text after docs to text</label
+              >
+              <textarea
+                class="form-control"
+                name="resume"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+             <input type="submit" class="btn btn-light"></input>
+          </form>
+
+         
+        </div>
+        <div class="result_box col-md shadow-sm">
+          <h2 class="my-4 fw-bold">Result</h2>
+         <div class=" result-container container">
+            <div class=" result_div row  bg-primary p-2 my-2">
+             {{result}}
+            </div>
+             <div class="row w-100 bg-light p-2 rounded-2 my-5 shadow-lg">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+              eaque sed sit, debitis nesciunt repudiandae.
+            </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 

@@ -50,3 +50,6 @@ body {
   background: linear-gradient(to right, #ab74ff, #7e28ff);
   color: #ffffff;
 }
+#result_score {
+  background-color: #ab74ff;
+}

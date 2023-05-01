@@ -22,13 +22,14 @@ body {
   height: 85vh;
   margin: 5px 10px;
   border-radius: 10px;
-  background: linear-gradient(to right, #ab74ff, #7e28ff);
+
+  padding: 20px;
 }
 .result_box {
   height: 85vh;
   margin: 5px 10px;
   border-radius: 10px;
-  background: #ffffff;
+  background: linear-gradient(to right, #f8f8f8, #f7f1ff);
 }
 
 .result-container {
@@ -47,7 +48,7 @@ body {
   align-items: center;
   font-size: 2.2rem;
   font-weight: 600;
-  background: linear-gradient(to right, #ab74ff, #7e28ff);
+  background: linear-gradient(to right, #b87eff, #5704d3);
   color: #ffffff;
 }
 #result_score {

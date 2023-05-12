@@ -4,7 +4,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
-import docx2txt
+import docx2txt 
 import os
 from pathlib import Path
 
@@ -54,7 +54,7 @@ def resumeScanner(request):
     except:
 
         print("something went wrong")
-        return HttpResponse("please upload in .docs")
+        return HttpResponse("please upload docs File ........")
  
 
  
